@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; }
+    h1, h2, h3 { margin: 0; }
+    .header, .footer { text-align: center; }
+    .section { margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #000; padding: 8px; text-align: left; font-size: 14px; }
+    .no-border td { border: none; }
+    .totals td { font-weight: bold; }
+    .right { text-align: right; }
+    .bold { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>SRIDATTA INFOTECH</h1>
+    <p>24-804/2 PANCHASHEELA COLONY, IDPL, BALANAGAR, ROAD NO: 5, 500037<br>
+       Phone: 8686990882 | GST NO: 36AEYFS6224C1ZP<br>
+       Email: salessridattainfotech@gmail.com</p>
+  </div>
+
+  <div class="section">
+    <h2>INVOICE</h2>
+    <table class="no-border">
+      <tr>
+        <td><strong>Bill To:</strong><br>
+          <%= invoice.customer.customer_name %><br>
+          <%= invoice.customer.customer_address_1 %><br>
+          <%= invoice.customer.customer_address_2 %><br>
+          <%= invoice.customer.customer_town %>, <%= invoice.customer.customer_county %><br>
+          <%= invoice.customer.customer_pincode %>
+        </td>
+        <td class="right">
+          <strong>Invoice No:</strong> <%= invoice.invoice_number %><br>
+          <strong>Date:</strong> <%= invoice.invoice_date %><br>
+          <strong>Due Date:</strong> <%= invoice.due_date %><br>
+          <strong>GSTIN:</strong> 36AABCT7789F1Z
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>S.NO</th>
+        <th>DESCRIPTION</th>
+        <th>QTY</th>
+        <th>PRICE PER</th>
+        <th>AMOUNT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% invoice.items.forEach((item, index) => { %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= item.description %></td>
+          <td><%= item.quantity %></td>
+          <td>₹<%= item.price.toFixed(2) %></td>
+          <td>₹<%= item.total.toFixed(2) %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+  <table class="no-border" style="margin-top: 20px;">
+    <tr>
+      <td class="right bold">SUBTOTAL:</td>
+      <td class="right">₹<%= invoice.subtotal.toFixed(2) %></td>
+    </tr>
+    <tr>
+      <td class="right bold">CGST (9%):</td>
+      <td class="right">₹<%= (invoice.subtotal * 0.09).toFixed(2) %></td>
+    </tr>
+    <tr>
+      <td class="right bold">SGST (9%):</td>
+      <td class="right">₹<%= (invoice.subtotal * 0.09).toFixed(2) %></td>
+    </tr>
+    <tr>
+      <td class="right bold">TOTAL:</td>
+      <td class="right">₹<%= invoice.total.toFixed(2) %></td>
+    </tr>
+  </table>
+
+  <div class="section">
+    <p class="bold">BANK DETAILS:</p>
+    <p>BANK: THE AP MAHESH COOPERATIVE BANK<br>
+       A/C NO: 018001200008056<br>
+       IFSC CODE: APMC0000018</p>
+  </div>
+
+  <div class="footer">
+    <p>Thank you for your business!</p>
+  </div>
+</body>
+</html>

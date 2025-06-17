@@ -1,0 +1,335 @@
+/* Container */
+.custlst-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0.75rem 1rem;
+  background-color: #f9fafb;
+  color: #1f2937;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-height: 75vh;
+  overflow: hidden;
+}
+
+/* Header */
+.custlst-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1e40af;
+  margin: 0;
+}
+
+.custlst-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+/* Dark mode toggle button */
+.custlst-toggle-darkmode-btn {
+  background: #1e40af;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custlst-toggle-darkmode-btn:hover {
+  background-color: #374151;
+}
+
+/* Success message */
+.custlst-message.custlst-success {
+  background-color: #d1fae5;
+  color: #166534;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  box-shadow: 0 5px 16px rgba(22, 101, 52, 0.3);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Search */
+.custlst-search-wrapper {
+  margin-bottom: 1rem;
+}
+
+.custlst-search-input {
+  width: 100%;
+  max-width: 280px;
+  padding: 0.5rem 0.75rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.custlst-search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* Table Wrapper */
+.custlst-table-wrapper-scroll {
+  overflow-y: auto;
+  max-height: 50vh;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(30, 64, 175, 0.12);
+  background-color: white;
+}
+
+/* Table */
+.custlst-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.custlst-table thead th {
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
+  color: #f0f9ff;
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  text-align: left;
+}
+
+.custlst-table th,
+.custlst-table td {
+  border-bottom: 1px solid #e0e7ff;
+  padding: 0.7rem 1rem;
+  vertical-align: middle;
+}
+
+.custlst-table tbody tr:nth-child(even) {
+  background-color: #eff6ff;
+}
+
+.custlst-table tbody tr:hover {
+  background-color: #1e40af;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.custlst-no-data {
+  text-align: center;
+  padding: 2rem 0;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Actions */
+.custlst-actions-cell {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.custlst-btn {
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  font-size: 0.85rem;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.custlst-edit-btn {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 5px 18px rgba(59, 130, 246, 0.5);
+}
+
+.custlst-edit-btn:hover {
+  background-color: #1e3a8a;
+  box-shadow: 0 7px 22px rgba(30, 58, 138, 0.7);
+}
+
+.custlst-delete-btn {
+  background-color: #dc2626;
+  color: white;
+  box-shadow: 0 5px 18px rgba(220, 38, 38, 0.5);
+}
+
+.custlst-delete-btn:hover {
+  background-color: #991b1b;
+  box-shadow: 0 7px 22px rgba(153, 27, 27, 0.7);
+}
+
+/* Pagination */
+.custlst-pagination {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.custlst-page-btn {
+  border: 1.5px solid #3b82f6;
+  background-color: white;
+  color: #3b82f6;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.custlst-page-btn:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.custlst-page-btn.active {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 700;
+  cursor: default;
+}
+
+/* Modal Overlay */
+.custlst-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+/* Modal Box */
+.custlst-modal {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+}
+
+.custlst-modal h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.custlst-modal p {
+  font-size: 1rem;
+  margin-bottom: 1.8rem;
+  color: #374151;
+}
+
+.custlst-modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.custlst-cancel-btn {
+  background-color: #9ca3af;
+  color: white;
+  box-shadow: 0 5px 15px rgba(156, 163, 175, 0.6);
+}
+
+.custlst-cancel-btn:hover {
+  background-color: #6b7280;
+}
+
+.custlst-confirm-btn {
+  background-color: #dc2626;
+  color: white;
+  box-shadow: 0 5px 18px rgba(220, 38, 38, 0.6);
+}
+
+.custlst-confirm-btn:hover {
+  background-color: #991b1b;
+}
+
+/* Dark Mode */
+.custlst-dark {
+  background-color: #1f2937;
+  color: #d1d5db;
+}
+
+.custlst-dark .custlst-table thead th {
+  background: linear-gradient(90deg, #2563eb, #1e3a8a);
+  color: #e0e7ff;
+}
+
+.custlst-dark .custlst-table tbody tr:nth-child(even) {
+  background-color: #374151;
+}
+
+.custlst-dark .custlst-table tbody tr:hover {
+  background-color: #2563eb;
+  color: #f3f4f6;
+}
+
+.custlst-dark .custlst-search-input {
+  background-color: #374151;
+  color: #d1d5db;
+  border-color: #4b5563;
+}
+
+.custlst-dark .custlst-search-input::placeholder {
+  color: #9ca3af;
+}
+
+.custlst-dark .custlst-search-input:focus {
+  border-color: #60a5fa;
+}
+
+.custlst-dark .custlst-btn {
+  box-shadow: none;
+}
+
+.custlst-dark .custlst-edit-btn {
+  background-color: #2563eb;
+}
+
+.custlst-dark .custlst-delete-btn {
+  background-color: #b91c1c;
+}
+
+.custlst-dark .custlst-pagination .custlst-page-btn {
+  border-color: #60a5fa;
+  color: #60a5fa;
+  background-color: transparent;
+}
+
+.custlst-dark .custlst-pagination .custlst-page-btn:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.custlst-dark .custlst-pagination .custlst-page-btn.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.custlst-dark .custlst-toggle-darkmode-btn {
+  background-color: #2563eb;
+  color: #e0e7ff;
+}
+
+.custlst-dark .custlst-toggle-darkmode-btn:hover {
+  background-color: #1e3a8a;
+}

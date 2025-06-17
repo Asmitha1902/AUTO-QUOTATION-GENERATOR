@@ -1,0 +1,101 @@
+/* Container */
+.product-add-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f9fafb;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  color: #1f2937;
+}
+
+/* Header */
+.product-add-header {
+  background-color: #1e40af;
+  color: #ffffff;
+  padding: 1.25rem;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Form Section */
+.product-add-form {
+  padding: 2rem;
+}
+
+.product-add-form .form-floating {
+  margin-bottom: 1.5rem;
+}
+
+.product-add-form input {
+  padding: 1rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+  background-color: #fff;
+}
+
+.product-add-form input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+/* Labels */
+.product-add-form label {
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Button */
+.product-add-form button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.product-add-form button:hover {
+  background-color: #1e3a8a;
+}
+
+/* Alerts */
+.alert {
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.alert-success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.alert-danger {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #f87171;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-add-container {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .product-add-form {
+    padding: 1rem;
+  }
+}

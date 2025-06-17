@@ -1,0 +1,307 @@
+/* Container */
+.userlist-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0.75rem 1rem;
+  background-color: #f9fafb;
+  color: #1f2937;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-height: 75vh;
+  overflow: hidden;
+}
+
+/* Header */
+.userlist-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1e40af;
+  margin: 0;
+}
+
+.userlist-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+/* Dark mode toggle button */
+.userlist-toggle-darkmode-btn {
+  background: #1e40af;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.userlist-toggle-darkmode-btn:hover {
+  background-color: #374151;
+}
+
+/* Success and error message */
+.userlist-message.userlist-success {
+  background-color: #d1fae5;
+  color: #166534;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  box-shadow: 0 5px 16px rgba(22, 101, 52, 0.3);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.userlist-message.userlist-error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  box-shadow: 0 5px 16px rgba(153, 27, 27, 0.3);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Search */
+.userlist-search-wrapper {
+  margin-bottom: 1rem;
+}
+
+.userlist-search-input {
+  width: 100%;
+  max-width: 280px;
+  padding: 0.5rem 0.75rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.userlist-search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* Dark mode styles for search input */
+.userlist-dark .userlist-search-input {
+  background-color: #374151;
+  color: #d1d5db;
+  border-color: #4b5563;
+}
+
+.userlist-dark .userlist-search-input:focus {
+  border-color: #60a5fa;
+}
+
+/* Table Wrapper */
+.userlist-table-wrapper-scroll {
+  overflow-y: auto;
+  max-height: 50vh;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(30, 64, 175, 0.12);
+  background-color: white;
+}
+
+/* Table */
+.userlist-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.userlist-table thead th {
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
+  color: #f0f9ff;
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  text-align: left;
+}
+
+.userlist-table th,
+.userlist-table td {
+  border-bottom: 1px solid #e0e7ff;
+  padding: 0.7rem 1rem;
+  vertical-align: middle;
+}
+
+.userlist-table tbody tr:nth-child(even) {
+  background-color: #eff6ff;
+}
+
+.userlist-table tbody tr:hover {
+  background-color: #1e40af;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.userlist-no-data {
+  text-align: center;
+  padding: 2rem 0;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Actions */
+.userlist-actions-cell {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.userlist-btn {
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  font-size: 0.85rem;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.userlist-edit-btn {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 5px 18px rgba(59, 130, 246, 0.5);
+}
+
+.userlist-edit-btn:hover {
+  background-color: #1e3a8a;
+  box-shadow: 0 7px 22px rgba(30, 58, 138, 0.7);
+}
+
+.userlist-delete-btn {
+  background-color: #dc2626;
+  color: white;
+  box-shadow: 0 5px 18px rgba(220, 38, 38, 0.5);
+}
+
+.userlist-delete-btn:hover {
+  background-color: #991b1b;
+  box-shadow: 0 7px 22px rgba(153, 27, 27, 0.7);
+}
+
+/* Modal Overlay */
+.userlist-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+/* Modal Box */
+.userlist-modal {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+}
+
+.userlist-modal p {
+  font-size: 1rem;
+  margin-bottom: 1.8rem;
+  color: #374151;
+}
+
+.userlist-modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.userlist-cancel-btn {
+  background-color: #9ca3af;
+  color: white;
+  box-shadow: 0 5px 15px rgba(156, 163, 175, 0.6);
+}
+
+.userlist-cancel-btn:hover {
+  background-color: #6b7280;
+}
+
+.userlist-confirm-btn {
+  background-color: #dc2626;
+  color: white;
+  box-shadow: 0 5px 18px rgba(220, 38, 38, 0.6);
+}
+
+.userlist-confirm-btn:hover {
+  background-color: #991b1b;
+}
+
+/* Dark Mode */
+.userlist-dark {
+  background-color: #1f2937;
+  color: #d1d5db;
+}
+
+.userlist-dark .userlist-table thead th {
+  background: linear-gradient(90deg, #2563eb, #1e3a8a);
+  color: #e0e7ff;
+}
+
+.userlist-dark .userlist-table tbody tr:nth-child(even) {
+  background-color: #374151;
+}
+
+.userlist-dark .userlist-table tbody tr:hover {
+  background-color: #2563eb;
+  color: #f3f4f6;
+}
+
+.userlist-dark .userlist-btn {
+  box-shadow: none;
+}
+
+.userlist-dark .userlist-edit-btn {
+  background-color: #2563eb;
+}
+
+.userlist-dark .userlist-delete-btn {
+  background-color: #b91c1c;
+}
+
+.userlist-dark .userlist-modal {
+  background-color: #374151;
+  color: #d1d5db;
+}
+
+.userlist-dark .userlist-modal-buttons .userlist-cancel-btn {
+  background-color: #6b7280;
+  color: #f9fafb;
+}
+
+.userlist-dark .userlist-modal-buttons .userlist-cancel-btn:hover {
+  background-color: #4b5563;
+}
+
+.userlist-dark .userlist-modal-buttons .userlist-confirm-btn {
+  background-color: #b91c1c;
+  color: #f9fafb;
+}
+
+.userlist-dark .userlist-modal-buttons .userlist-confirm-btn:hover {
+  background-color: #7f1d1d;
+}
+
+.userlist-dark .userlist-message.userlist-success {
+  background-color: #064e3b;
+  color: #bbf7d0;
+}

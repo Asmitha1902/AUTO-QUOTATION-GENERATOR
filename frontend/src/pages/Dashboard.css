@@ -1,0 +1,38 @@
+.info-box {
+    color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .info-box .inner {
+    flex: 1;
+  }
+  
+  .info-box .inner h3 {
+    font-size: 28px;
+    margin: 0;
+  }
+  
+  .info-box .inner p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .info-box .icon {
+    font-size: 40px;
+    opacity: 0.3;
+  }
+  
+  /* Custom Colors */
+  .bg-pink {
+    background-color: #e91e63 !important;
+  }
+  .bg-teal {
+    background-color: #009688 !important;
+  }
+  
