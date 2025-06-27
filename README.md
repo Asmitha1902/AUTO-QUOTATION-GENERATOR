@@ -10,7 +10,7 @@ An intelligent full-stack web application that helps businesses generate and man
 -  Customer & Product Management
 -  Invoice/Quotation Generator
 -  Dashboard for Overview
-- AI Modules (Chatbot, Invoice Predictor using Python) *(optional)*
+
 
 ---
 
@@ -19,7 +19,7 @@ An intelligent full-stack web application that helps businesses generate and man
 - **Frontend**: React.js (Vite)
 - **Backend**: Node.js + Express
 - **Database**: MongoDB
-- **AI/ML** *(optional)*: Python scripts for chatbot & invoice prediction
+
 
 ---
 
@@ -29,7 +29,7 @@ An intelligent full-stack web application that helps businesses generate and man
 
 - [Node.js](https://nodejs.org/) & npm
 - [MongoDB](https://www.mongodb.com/) (local or MongoDB Atlas)
-- [Python](https://www.python.org/) (only if using AI features)
+
 
 ---
 
